@@ -11,7 +11,7 @@ function InputForm({ setResponse }) {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ data: JSON.parse(input) })
+        body: JSON.stringify({ data: JSON.parse(input).data })
       });
       const data = await response.json();
       console.log(data)
